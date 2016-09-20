@@ -3,7 +3,7 @@
 configuration Sample_EndToEndxWebAdministration 
 { 
 	param ($MachineName)
-    Import-DscResource -Module xWebAdministration 
+    #Import-DscResource -Module xWebAdministration 
 	Node $MachineName
     { 
 		
@@ -96,4 +96,5 @@ configuration Sample_EndToEndxWebAdministration
           DependsOn = @("[File]CreateWebConfig") 
         } 
     } 
+
 }
