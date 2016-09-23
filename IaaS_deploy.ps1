@@ -2,9 +2,9 @@
   
 configuration Sample_EndToEndxWebAdministration 
 { 
-	param ($MachineName)
-    #Import-DscResource -Module xWebAdministration 
-	Node $MachineName
+	param ($vmName)
+    Import-DscResource -Module xWebAdministration 
+	Node $vmName
     { 
 		
 		WindowsFeature IIS 
@@ -96,5 +96,4 @@ configuration Sample_EndToEndxWebAdministration
           DependsOn = @("[File]CreateWebConfig") 
         } 
     } 
-
 }
