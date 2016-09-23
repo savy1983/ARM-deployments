@@ -2,9 +2,9 @@
   
 configuration Sample_EndToEndxWebAdministration 
 { 
-	param ($vmName)
+	#param ($vmName)
     Import-DscResource -Module xWebAdministration 
-	Node $vmName
+	Node localhost
     { 
 		
 		WindowsFeature IIS 
